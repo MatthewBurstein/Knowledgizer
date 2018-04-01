@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
+    "server": "nodemon server/server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "server-test": "jest __tests__"
+    "client-test": "cd client && npm test",
+
+    "server-test": "jest"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -21,7 +23,8 @@
     "concurrently": "^3.5.0"
   },
   "jest": {
-    "moduleDirectories": ["node_modules"]
+    "moduleDirectories": ["node_modules"],
+    "rootDir": "./server"
   },
   "author": "Matt Burstein",
   "license": "ISC"
