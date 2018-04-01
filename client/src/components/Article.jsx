@@ -3,18 +3,15 @@ import React, { Component } from 'react';
 class Article extends Component {
   constructor() {
     super();
-
-    // let article =  wikiGetRequest();
-
-    this.state;
+    this.setState(this.props)
   }
 
 
   render() {
     return(
       <div>
-        <a href={this.state.url}>
-          {this.state.title}
+        <a href={this.props.url}>
+          {this.props.title}
         </a>
       </div>
     )

@@ -6,12 +6,12 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server/server.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "client-test": "cd client && npm test",
-
     "server-test": "jest"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "express": "^4.16.2",
@@ -23,7 +23,9 @@
     "concurrently": "^3.5.0"
   },
   "jest": {
-    "moduleDirectories": ["node_modules"],
+    "moduleDirectories": [
+      "node_modules"
+    ],
     "rootDir": "./server"
   },
   "author": "Matt Burstein",
