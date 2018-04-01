@@ -1,22 +1,20 @@
 {
   "name": "knowledgizer",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react-scripts": "1.1.1"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "jest-cli": "^20.0.4",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "react-test-renderer": "^16.3.0"
-  }
+    "concurrently": "^3.5.0"
+  },
+  "author": "Matt Burstein",
+  "license": "ISC"
 }
