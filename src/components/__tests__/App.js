@@ -8,4 +8,10 @@ describe('App', () => {
   it('renders properly', () => {
     expect(app).toMatchSnapshot();
   });
+
+  it('Contains an Article component', () => {
+    const article = app.find('Article');
+
+    expect(article.exists()).toBe(true);
+  })
 });
