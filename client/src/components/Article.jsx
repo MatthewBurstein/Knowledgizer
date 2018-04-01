@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { wikiGetRequest } from '../helpers/requestHelper';
 
 class Article extends Component {
   constructor() {
     super();
 
-    let article =  wikiGetRequest();
+    // let article =  wikiGetRequest();
 
-    this.state = article;
+    this.state;
   }
 
 
