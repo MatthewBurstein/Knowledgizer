@@ -3,10 +3,10 @@
 A project I am fiddling with for fun.
 
 #### Full specification
-A website which prints pulls random articles from wikipedia and prints them to the screen one by one. The articles will be printed in random locations and the user will be able to control how fast they appear.
+A website which pulls random articles from wikipedia and prints them to the screen one by one. The articles will be printed in random locations and the user will be able to control how fast they appear.
 
 #### Learning goals
-* Havefun!
+* Have fun!
 * Learn React and be able to implement react features in a test driven manner
 * Improve my understanding of asynchronous code
 * Improve my understanding of the links between back end and front end technologies
@@ -15,7 +15,7 @@ A website which prints pulls random articles from wikipedia and prints them to t
   * Testing: the app will be updating it's own state asynchronously, and the content on the screen will update too. This means that my tests will have to take into account that the state of the app changes over time with no user input.
 
 #### Plan
-* The eventual way I am hoping to build this is as follows:
+The way I am hoping to build this (It has some new ideas to me so I'm expecting that I might have to change) is as follows:
 * The app will store an array of article objects containing the article id, title and url from the Wiki API.
 * The user will define the time unit in milliseconds via controls in a floating component on the page
 * Each time unit, one article from the array will be removed and printed to the screen in a random location. The printed content will be a link to the article whose body is the title.
