@@ -12,17 +12,12 @@ class App extends Component {
       .catch(err => console.log(err));
   };
 
-  callApi = () => {
-    return new Promise((res, rej) {
-      fetch('/api')
-        .resolve(response => JSON.parse(response))
-        .reject(err => console.log(err))
-    })
-    // const response = await fetch('/api');
-    // const body = await response.json();
-    // if (response.status !== 200) throw Error(body.message);
+  async callApi() {
+    const response = await fetch('/api');
+    const body = await response.json();
+    if (response.status !== 200) throw Error(body.message);
 
-    // return body;
+    return body;
   };
 
   render() {
