@@ -11,7 +11,6 @@ describe('Article', () => {
   });
 
   it('intializes an article with a title in state', () => {
-    console.log(article.state())
     expect(article.state().title).toEqual('testTitle');
   });
 });

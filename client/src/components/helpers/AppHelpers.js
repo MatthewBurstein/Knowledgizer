@@ -1,12 +1,12 @@
-const delay = function(callbackArgs, callback, delayTime) {
-  if (callbackArgs.length == 0) { return }
-  let currentArg = callbackArgs.shift();
+const delayAndRepeat = function(delayedFunct, delayedFunctArgs, delayTime) {
+  if (delayedFunctArgs.length == 0) { return }
+  let currentArg = delayedFunctArgs.shift();
   setTimeout(() => {
-    callback(currentArg);
-    if(callbackArgs.length > 0) {
-      delay(callbackArgs, callback, delayTime);
+    delayedFunct(currentArg);
+    if(delayedFunctArgs.length > 0) {
+      delayAndRepeat(delayedFunct, delayedFunctArgs, delayTime);
     }
   }, delayTime);
 }
 
-export default delay
+export default delayAndRepeat;

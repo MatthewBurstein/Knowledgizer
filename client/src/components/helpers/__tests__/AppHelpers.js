@@ -1,19 +1,33 @@
-import delay from '../AppHelpers'
+import delayAndRepeat from '../AppHelpers'
 
 jest.useFakeTimers();
 
-describe('delay', () => {
+describe('delayAndRepeat', () => {
+  let delayedFunct, delayTime;
+
+  beforeEach(() => {
+    delayedFunct = jest.fn();
+    delayTime = 1000;
+  })
+
   it('calls the callback once per second with the first argument', () => {
-    let total = 0
-    let callbackArgs = [1, 2, 3]
-    let callback = jest.fn(arg => { return total += arg });
-    let delayTime = 1000;
+    let delayedFunctArgs = [1, 2]
+    delayAndRepeat(delayedFunct, delayedFunctArgs, delayTime);
 
-    delay(callbackArgs, callback, delayTime);
-    expect(callback).not.toBeCalled();
-    console.log(jest)
-    jest.advanceTimersByTime(1000)
+    expect(delayedFunct).not.toBeCalled();
 
-    expect(callback).toHaveBeenCalledwith(1);
+    jest.runTimersToTime(delayTime)
+    expect(delayedFunct).toHaveBeenCalledWith(1);
+
+    jest.runTimersToTime(delayTime)
+    expect(delayedFunct).toHaveBeenLastCalledWith(2);
   });
+
+  it('returns undefined delayedFunctArgs argument is empty', () => {
+    let delayedFunctArgs = [];
+    delayAndRepeat(delayedFunct, delayedFunctArgs, delayTime);
+
+    jest.runTimersToTime(delayTime)
+    expect(delayedFunct).not.toBeCalled();
+  })
 });
