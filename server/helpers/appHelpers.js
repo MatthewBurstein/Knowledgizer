@@ -7,7 +7,7 @@ const wikiDataProcessor = response => {
 }
 
 const wikiGetRequest = (axios, res) =>{
-  axios.get('https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnlimit=10&rnnamespace=0')
+  axios.get('https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnlimit=20&rnnamespace=0')
     .then(response => {
       res.send(wikiDataProcessor(response));
     })
