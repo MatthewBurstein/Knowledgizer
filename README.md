@@ -35,7 +35,7 @@ Testing
 * Jest
 * Supertest
 
-#### To user
+#### To use
 ```
 $ npm start
 ```
