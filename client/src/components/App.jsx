@@ -10,13 +10,11 @@ class App extends Component {
     this.callApi()
       .then(res => this.setState(res))
       .catch(err => console.log(err));
-  }
+  };
 
   callApi = async () => {
     const response = await fetch('/api');
-    console.log('response is', response)
     const body = await response.json();
-    console.log('body is', body);
     if (response.status !== 200) throw Error(body.message);
 
     return body;

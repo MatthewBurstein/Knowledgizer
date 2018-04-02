@@ -21,7 +21,10 @@ ShallowWrapper {
         <h2>
           Knowledgizer
 </h2>,
-        <Article />,
+        <Article
+          title={undefined}
+          url={undefined}
+/>,
       ],
     },
     "ref": null,
@@ -41,7 +44,10 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "title": undefined,
+          "url": undefined,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -59,7 +65,10 @@ ShallowWrapper {
           <h2>
             Knowledgizer
 </h2>,
-          <Article />,
+          <Article
+            title={undefined}
+            url={undefined}
+/>,
         ],
       },
       "ref": null,
@@ -79,7 +88,10 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "title": undefined,
+            "url": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

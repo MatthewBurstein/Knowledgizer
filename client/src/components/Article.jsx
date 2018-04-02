@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 class Article extends Component {
-  constructor() {
+  constructor(props) {
     super();
-    this.setState(this.props)
+
+    this.state = props
   }
 
 

@@ -4,7 +4,10 @@ exports[`Article renders properly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Article />,
+  Symbol(enzyme.__unrendered__): <Article
+    title="testTitle"
+    url="testWikiUrl"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,9 +21,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <a
-        href="some url"
+        href="testWikiUrl"
 >
-        some headline
+        testTitle
 </a>,
     },
     "ref": null,
@@ -29,11 +32,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "some headline",
-        "href": "some url",
+        "children": "testTitle",
+        "href": "testWikiUrl",
       },
       "ref": null,
-      "rendered": "some headline",
+      "rendered": "testTitle",
       "type": "a",
     },
     "type": "div",
@@ -45,9 +48,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <a
-          href="some url"
+          href="testWikiUrl"
 >
-          some headline
+          testTitle
 </a>,
       },
       "ref": null,
@@ -56,11 +59,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "some headline",
-          "href": "some url",
+          "children": "testTitle",
+          "href": "testWikiUrl",
         },
         "ref": null,
-        "rendered": "some headline",
+        "rendered": "testTitle",
         "type": "a",
       },
       "type": "div",
