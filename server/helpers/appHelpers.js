@@ -1,11 +1,13 @@
-const wikiDataProcessor = data => {
-  const article =  data.data.query.random[0];
-  article.url = `https://en.wikipedia.org/wiki/${article.title}`;
-  return article;
+const wikiDataProcessor = response => {
+  let articles = response.data.query.random.map( article => {
+    article.url = `https://en.wikipedia.org/wiki/${article.title}`;
+    return article;
+  })
+  return {...articles};
 }
 
 const wikiGetRequest = (axios, res) =>{
-  axios.get('https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnlimit=1&rnnamespace=0')
+  axios.get('https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnlimit=10&rnnamespace=0')
     .then(response => {
       res.send(wikiDataProcessor(response));
     })
