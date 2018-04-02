@@ -3,7 +3,7 @@ const wikiDataProcessor = response => {
     article.url = `https://en.wikipedia.org/wiki/${article.title}`;
     return article;
   })
-  return {...articles};
+  return { articles };
 }
 
 const wikiGetRequest = (axios, res) =>{
