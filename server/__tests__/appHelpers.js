@@ -7,7 +7,7 @@ let response = { data: { query: { random: [{title: 'some title'}, {title: 'anoth
 
 describe('wikiGetRequest', () => {
   const res = { send: jest.fn(() => {}) };
-  const address = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnlimit=10&rnnamespace=0'
+  const address = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=random&rnlimit=20&rnnamespace=0'
   axios.get = jest.fn(() => { return Promise.resolve(response)})
 
   it('calls .get on the axios module', () => {
