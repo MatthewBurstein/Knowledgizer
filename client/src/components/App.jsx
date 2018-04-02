@@ -1,34 +1,29 @@
 import React, { Component } from 'react';
 import Article from './Article';
+import { delayAndRepeat } from './helpers/AppHelpers.js';
 
 class App extends Component {
   constructor() {
     super();
 
     this.articles=[];
-
     this.state = {
       articles: [{id:'', title: '', url: ''}]
     };
-  }
+  };
 
 
   componentDidMount() {
     this.callApi()
       .then(res => {
-        console.log('res: ', res)
         this.articles = this.articles.concat(res.articles);
-        console.log('this.articles', this.articles)
-        this.setState(prevState => {
-          console.log("prevstate", prevState);
-          console.log('inside setState this.articles ', this.articles)
-          console.log(prevState.articles)
-          let newState = {articles: [...prevState.articles, this.articles[0]]}
-          console.log(newState)
-          return newState
-        })
+        delayAndRepeat(this.addArticleToState, this.articles, 1000);
       })
       .catch(err => console.log(err));
+  };
+
+  addArticleToState = article => {
+    this.setState(prevState => ({ articles: [...prevState.articles, article] }));
   };
 
   async callApi() {
@@ -46,7 +41,7 @@ class App extends Component {
           url={article.url}
           />
         )
-  }
+  };
 
   render() {
     return (

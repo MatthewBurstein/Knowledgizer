@@ -1,4 +1,4 @@
-import delayAndRepeat from '../AppHelpers'
+import { delayAndRepeat } from '../AppHelpers'
 
 jest.useFakeTimers();
 
@@ -10,7 +10,7 @@ describe('delayAndRepeat', () => {
     delayTime = 1000;
   })
 
-  it('calls the callback once per second with the first argument', () => {
+  it('calls the callback once per second with each successive argument from delayedFunctArgs', () => {
     let delayedFunctArgs = [1, 2]
     delayAndRepeat(delayedFunct, delayedFunctArgs, delayTime);
 

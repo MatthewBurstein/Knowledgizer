@@ -1,5 +1,5 @@
-const delayAndRepeat = function(delayedFunct, delayedFunctArgs, delayTime) {
-  if (delayedFunctArgs.length == 0) { return }
+export const delayAndRepeat = (delayedFunct, delayedFunctArgs, delayTime) => {
+  if (delayedFunctArgs.length === 0) { return }
   let currentArg = delayedFunctArgs.shift();
   setTimeout(() => {
     delayedFunct(currentArg);
@@ -8,5 +8,3 @@ const delayAndRepeat = function(delayedFunct, delayedFunctArgs, delayTime) {
     }
   }, delayTime);
 }
-
-export default delayAndRepeat;
