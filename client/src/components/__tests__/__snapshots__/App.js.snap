@@ -21,10 +21,16 @@ ShallowWrapper {
         <h2>
           Knowledgizer
 </h2>,
-        <Article
-          title={undefined}
-          url={undefined}
+        Array [
+          <Article
+            title="some title"
+            url="https://en.wikipedia.org/wiki/some title"
 />,
+          <Article
+            title="another title"
+            url="https://en.wikipedia.org/wiki/another title"
+/>,
+        ],
       ],
     },
     "ref": null,
@@ -42,11 +48,23 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "1",
         "nodeType": "class",
         "props": Object {
-          "title": undefined,
-          "url": undefined,
+          "title": "some title",
+          "url": "https://en.wikipedia.org/wiki/some title",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "title": "another title",
+          "url": "https://en.wikipedia.org/wiki/another title",
         },
         "ref": null,
         "rendered": null,
@@ -65,10 +83,16 @@ ShallowWrapper {
           <h2>
             Knowledgizer
 </h2>,
-          <Article
-            title={undefined}
-            url={undefined}
+          Array [
+            <Article
+              title="some title"
+              url="https://en.wikipedia.org/wiki/some title"
 />,
+            <Article
+              title="another title"
+              url="https://en.wikipedia.org/wiki/another title"
+/>,
+          ],
         ],
       },
       "ref": null,
@@ -86,11 +110,23 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "1",
           "nodeType": "class",
           "props": Object {
-            "title": undefined,
-            "url": undefined,
+            "title": "some title",
+            "url": "https://en.wikipedia.org/wiki/some title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "title": "another title",
+            "url": "https://en.wikipedia.org/wiki/another title",
           },
           "ref": null,
           "rendered": null,

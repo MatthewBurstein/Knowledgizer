@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import Article from './Article';
 
 class App extends Component {
-  state = {
-    response: ''
-  };
+  constructor() {
+    super();
+
+    this.state = {
+      articles: [{id:'', title: '', url: ''}]
+    };
+  }
+
 
   componentDidMount() {
     this.callApi()
@@ -16,7 +21,6 @@ class App extends Component {
     const response = await fetch('/api');
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
-
     return body;
   };
 
@@ -24,11 +28,13 @@ class App extends Component {
     return (
       <div>
         <h2>Knowledgizer</h2>
-        <Article
-          key={this.state.id}
-          title={this.state.title}
-          url={this.state.url}
-        />
+        {this.state.articles.map(article => {
+          return <Article
+            key={article.id}
+            title={article.title}
+            url={article.url}
+          />
+        })}
       </div>
     )
   }

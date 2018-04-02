@@ -26,10 +26,10 @@ describe('wikiGetRequest', () => {
 
 describe('wikiDataProcessor', () => {
   it('creates an object with a title and url', () => {
-    expectedObject = {
-      0: { title: 'some title', url: 'https://en.wikipedia.org/wiki/some title'},
-      1: { title: 'another title', url: 'https://en.wikipedia.org/wiki/another title'}
-    }
+    expectedObject = { articles: [
+      { title: 'some title', url: 'https://en.wikipedia.org/wiki/some title'},
+      { title: 'another title', url: 'https://en.wikipedia.org/wiki/another title'}
+    ]}
     expect(wikiDataProcessor(response)).toEqual(expectedObject)
   })
 })
