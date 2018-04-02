@@ -18,9 +18,9 @@ A website which pulls random articles from wikipedia and prints them to the scre
 The way I am hoping to build this (It has some new ideas to me so I'm expecting that I might have to change) is as follows:
 * The app will store an array of article objects containing the article id, title and url from the Wiki API.
 * The user will define the time unit in milliseconds via controls in a floating component on the page
-* Each time unit, one article from the array will be removed and printed to the screen in a random location. The printed content will be a link to the article whose body is the title.
-* When the articles array reaches 10 (or some appropriate number), the app will request another load of articles from the API via the express server.
-* The response will be converted into a number article objects and each objecte pushed into the artices array used by the app.
+* Each time unit, one article from the array will be removed and printed to the screen in a random location. The printed content will be a link to the article where the link-text is the article title.
+* When the size of the articles array drops to 10 (or some appropriate number), the app will request another load of articles from the API via the express server.
+* The response will be converted into an array of article objects and each object pushed into the articles array used by the app.
 * There will be a reset button on the screen which will remove all articles from the page.
 * There will be a start button which will begin adding articles to the page again.
 
