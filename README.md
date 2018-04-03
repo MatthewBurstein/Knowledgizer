@@ -73,3 +73,18 @@ As a user
 I want the articles to print to the screen one per second
 So that I can decide which one I want to click on
 ```
+
+###### v4
+```
+As a User
+I want to click a button and stop the links from printing and clear the screen
+So it won't get too cluttered
+
+As a User
+I want to click a button and start printing links
+In case I click stop by mistake
+
+As a User
+I want the links to keep printing unless I click stop
+So I can be sure to find something interesting
+```
