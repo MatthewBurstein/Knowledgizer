@@ -1,6 +1,6 @@
 export const delayAndRepeat = (delayedFunct, delayedFunctArgs, delayTime) => {
   if (delayedFunctArgs.length === 0) { return }
-  let currentArg = delayedFunctArgs.shift();
+  const currentArg = delayedFunctArgs.shift();
   setTimeout(() => {
     delayedFunct(currentArg);
     if(delayedFunctArgs.length > 0) {

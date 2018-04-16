@@ -9,8 +9,4 @@ describe('Article', () => {
   it('renders properly', () => {
     expect(article).toMatchSnapshot();
   });
-
-  it('intializes an article with a title in state', () => {
-    expect(article.state().title).toEqual('testTitle');
-  });
 });
