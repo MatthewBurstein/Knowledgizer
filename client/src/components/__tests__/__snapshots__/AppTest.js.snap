@@ -30,6 +30,10 @@ ShallowWrapper {
             title="another title"
             url="https://en.wikipedia.org/wiki/another title"
 />,
+          <Article
+            title="a third title"
+            url="https://en.wikipedia.org/wiki/a third title"
+/>,
         ],
       ],
     },
@@ -70,6 +74,18 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "class",
+        "props": Object {
+          "title": "a third title",
+          "url": "https://en.wikipedia.org/wiki/a third title",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -91,6 +107,10 @@ ShallowWrapper {
             <Article
               title="another title"
               url="https://en.wikipedia.org/wiki/another title"
+/>,
+            <Article
+              title="a third title"
+              url="https://en.wikipedia.org/wiki/a third title"
 />,
           ],
         ],
@@ -127,6 +147,18 @@ ShallowWrapper {
           "props": Object {
             "title": "another title",
             "url": "https://en.wikipedia.org/wiki/another title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "class",
+          "props": Object {
+            "title": "a third title",
+            "url": "https://en.wikipedia.org/wiki/a third title",
           },
           "ref": null,
           "rendered": null,
