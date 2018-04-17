@@ -16,4 +16,4 @@ const wikiGetRequest = (axios, res) =>{
     })
 }
 
-module.exports = { wikiDataProcessor, wikiGetRequest }
+export { wikiDataProcessor, wikiGetRequest }

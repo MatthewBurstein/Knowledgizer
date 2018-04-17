@@ -20,20 +20,20 @@ ShallowWrapper {
       "children": Array [
         <h2>
           Knowledgizer
-</h2>,
+        </h2>,
         Array [
           <Article
             title="some title"
             url="https://en.wikipedia.org/wiki/some title"
-/>,
+          />,
           <Article
             title="another title"
             url="https://en.wikipedia.org/wiki/another title"
-/>,
+          />,
           <Article
             title="a third title"
             url="https://en.wikipedia.org/wiki/a third title"
-/>,
+          />,
         ],
       ],
     },
@@ -98,20 +98,20 @@ ShallowWrapper {
         "children": Array [
           <h2>
             Knowledgizer
-</h2>,
+          </h2>,
           Array [
             <Article
               title="some title"
               url="https://en.wikipedia.org/wiki/some title"
-/>,
+            />,
             <Article
               title="another title"
               url="https://en.wikipedia.org/wiki/another title"
-/>,
+            />,
             <Article
               title="a third title"
               url="https://en.wikipedia.org/wiki/a third title"
-/>,
+            />,
           ],
         ],
       },

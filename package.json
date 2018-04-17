@@ -1,34 +1,58 @@
 {
   "name": "knowledgizer",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple app to find interesting articles",
   "main": "index.js",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon server/server.js",
-    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "client-test": "cd client && npm test",
-    "server-test": "jest"
+    "test": "jest",
+    "test-front-end": "node_modules/jest-cli/bin/jest.js --env=jsdom --watch src/",
+    "test-server": "jest --env=node buildScripts",
+    "start": "babel-node server/server.js"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "express": "^4.16.2",
-    "jest": "^22.4.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7",
     "superagent": "^3.8.2",
     "supertest": "^3.0.0"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-cli": "^21.2.1",
+    "open": "0.0.5",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-test-renderer": "^16.3.2",
+    "webpack": "^4.5.0",
+    "webpack-dev-middleware": "^3.1.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-2"
+    ],
+    "env": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
   },
   "jest": {
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "testEnvironment": "node",
-    "rootDir": "./server"
-  },
-  "author": "Matt Burstein",
-  "license": "ISC"
+    "setupTestFrameworkScriptFile": "./setupTests/setupTests.js"
+  }
 }

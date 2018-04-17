@@ -1,7 +1,5 @@
 const axios = require('axios');
-const appHelpers = require('../helpers/appHelpers');
-const wikiGetRequest = appHelpers.wikiGetRequest;
-const wikiDataProcessor = appHelpers.wikiDataProcessor;
+import { wikiGetRequest, wikiDataProcessor } from '../helpers/serverHelpers'
 
 let response = { data: { query: { random: [{title: 'some title'}, {title: 'another title'}]}}}
 
@@ -26,7 +24,7 @@ describe('wikiGetRequest', () => {
 
 describe('wikiDataProcessor', () => {
   it('creates an object with a title and url', () => {
-    expectedObject = { articles: [
+    const expectedObject = { articles: [
       { title: 'some title', url: 'https://en.wikipedia.org/wiki/some title'},
       { title: 'another title', url: 'https://en.wikipedia.org/wiki/another title'}
     ]}
