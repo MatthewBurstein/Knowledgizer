@@ -8,7 +8,7 @@ class App extends Component {
 
     this.articles=[];
     this.state = {
-      articles: [{id:'', title: '', url: ''}]
+      articles: []
     };
   };
 
@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div>
         <h2>Knowledgizer</h2>
-        {this.state.articles.map(article => {
+        {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)
         })}
       </div>
