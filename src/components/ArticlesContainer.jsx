@@ -45,7 +45,7 @@ class ArticlesContainer extends Component {
 
   render() {
     return(
-      <div>"success"
+      <div>
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)
         })}

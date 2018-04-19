@@ -18,26 +18,22 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        "\\"success\\"",
-        Array [
-          <Article
-            title="some title"
-            url="https://en.wikipedia.org/wiki/some title"
-          />,
-          <Article
-            title="another title"
-            url="https://en.wikipedia.org/wiki/another title"
-          />,
-          <Article
-            title="a third title"
-            url="https://en.wikipedia.org/wiki/a third title"
-          />,
-        ],
+        <Article
+          title="some title"
+          url="https://en.wikipedia.org/wiki/some title"
+        />,
+        <Article
+          title="another title"
+          url="https://en.wikipedia.org/wiki/another title"
+        />,
+        <Article
+          title="a third title"
+          url="https://en.wikipedia.org/wiki/a third title"
+        />,
       ],
     },
     "ref": null,
     "rendered": Array [
-      "\\"success\\"",
       Object {
         "instance": null,
         "key": "1",
@@ -84,26 +80,22 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          "\\"success\\"",
-          Array [
-            <Article
-              title="some title"
-              url="https://en.wikipedia.org/wiki/some title"
-            />,
-            <Article
-              title="another title"
-              url="https://en.wikipedia.org/wiki/another title"
-            />,
-            <Article
-              title="a third title"
-              url="https://en.wikipedia.org/wiki/a third title"
-            />,
-          ],
+          <Article
+            title="some title"
+            url="https://en.wikipedia.org/wiki/some title"
+          />,
+          <Article
+            title="another title"
+            url="https://en.wikipedia.org/wiki/another title"
+          />,
+          <Article
+            title="a third title"
+            url="https://en.wikipedia.org/wiki/a third title"
+          />,
         ],
       },
       "ref": null,
       "rendered": Array [
-        "\\"success\\"",
         Object {
           "instance": null,
           "key": "1",
