@@ -34,6 +34,10 @@ class ArticlesContainer extends Component {
     return body;
   };
 
+  clearArticles = () => {
+    this.setState(prevState => ({ articles: [] }))
+  };
+
   renderArticle(article) {
       return(
         <Article

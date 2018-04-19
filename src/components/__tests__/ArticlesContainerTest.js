@@ -27,6 +27,13 @@ describe('ArticlesContainer', () => {
     expect(articles).toHaveLength(3);
   });
 
+  describe('.clearArticles()', () => {
+    it('clears all articles from state', () => {
+      articlesContainer.instance().clearArticles()
+      expect(articlesContainer.state().articles).toHaveLength(0)
+    });
+  });
+
   describe('delay and repeat article rendering functionality', () => {
     let mountedArticlesContainer, callApiSpy, didMountSpy, setStateSpy;
     beforeAll(() => {
