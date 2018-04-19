@@ -4,9 +4,9 @@
   "description": "A simple app to find interesting articles",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --env=node server && CI=true node_modules/jest-cli/bin/jest.js --env=jsdom --watch src/",
     "test-front-end": "node_modules/jest-cli/bin/jest.js --env=jsdom --watch src/",
-    "test-server": "jest --env=node buildScripts",
+    "test-server": "jest --env=node server",
     "start": "babel-node server/server.js"
   },
   "author": "",

@@ -24,14 +24,14 @@ describe('App', () => {
   });
 
   describe('delay and repeat article rendering functionality', () => {
-    let callApiSpy, didMountSpy, setStateSpy, mountedApp;
+    let mountedApp, callApiSpy, didMountSpy, setStateSpy;
     beforeAll(() => {
-      callApiSpy = jest.spyOn(App.prototype, 'callApi').mockReturnValue('does this work').mockReturnValue(Promise.resolve({articles}));
+      callApiSpy = jest.spyOn(App.prototype, 'callApi').mockReturnValue(Promise.resolve({articles}));
       setStateSpy = jest.spyOn(App.prototype, 'setState');
       mountedApp = mount(<App />);
     });
 
-    it('calls callApi on mounting', () => {
+    it('calls call Api on mounting', () => {
       expect(callApiSpy).toHaveBeenCalledTimes(1);
     });
 
