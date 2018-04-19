@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
+import ArticleContainer from './ArticleContainer';
 import { delayAndRepeat } from './helpers/AppHelpers.js';
 
 class App extends Component {
@@ -47,6 +48,7 @@ class App extends Component {
     return (
       <div>
         <h2>Knowledgizer</h2>
+        <ArticleContainer />
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)
         })}

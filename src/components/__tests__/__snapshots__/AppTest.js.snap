@@ -21,6 +21,7 @@ ShallowWrapper {
         <h2>
           Knowledgizer
         </h2>,
+        <ArticleContainer />,
         Array [
           <Article
             title="some title"
@@ -49,6 +50,15 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Knowledgizer",
         "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -99,6 +109,7 @@ ShallowWrapper {
           <h2>
             Knowledgizer
           </h2>,
+          <ArticleContainer />,
           Array [
             <Article
               title="some title"
@@ -127,6 +138,15 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Knowledgizer",
           "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
         Object {
           "instance": null,
