@@ -22,20 +22,6 @@ ShallowWrapper {
           Knowledgizer
         </h2>,
         <ArticleContainer />,
-        Array [
-          <Article
-            title="some title"
-            url="https://en.wikipedia.org/wiki/some title"
-          />,
-          <Article
-            title="another title"
-            url="https://en.wikipedia.org/wiki/another title"
-          />,
-          <Article
-            title="a third title"
-            url="https://en.wikipedia.org/wiki/a third title"
-          />,
-        ],
       ],
     },
     "ref": null,
@@ -60,42 +46,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": "1",
-        "nodeType": "class",
-        "props": Object {
-          "title": "some title",
-          "url": "https://en.wikipedia.org/wiki/some title",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "2",
-        "nodeType": "class",
-        "props": Object {
-          "title": "another title",
-          "url": "https://en.wikipedia.org/wiki/another title",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "3",
-        "nodeType": "class",
-        "props": Object {
-          "title": "a third title",
-          "url": "https://en.wikipedia.org/wiki/a third title",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -110,20 +60,6 @@ ShallowWrapper {
             Knowledgizer
           </h2>,
           <ArticleContainer />,
-          Array [
-            <Article
-              title="some title"
-              url="https://en.wikipedia.org/wiki/some title"
-            />,
-            <Article
-              title="another title"
-              url="https://en.wikipedia.org/wiki/another title"
-            />,
-            <Article
-              title="a third title"
-              url="https://en.wikipedia.org/wiki/a third title"
-            />,
-          ],
         ],
       },
       "ref": null,
@@ -144,42 +80,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "1",
-          "nodeType": "class",
-          "props": Object {
-            "title": "some title",
-            "url": "https://en.wikipedia.org/wiki/some title",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "2",
-          "nodeType": "class",
-          "props": Object {
-            "title": "another title",
-            "url": "https://en.wikipedia.org/wiki/another title",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "3",
-          "nodeType": "class",
-          "props": Object {
-            "title": "a third title",
-            "url": "https://en.wikipedia.org/wiki/a third title",
-          },
           "ref": null,
           "rendered": null,
           "type": [Function],

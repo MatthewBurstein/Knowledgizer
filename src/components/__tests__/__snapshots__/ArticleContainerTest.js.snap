@@ -17,10 +17,64 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "\\"success\\"",
+      "children": Array [
+        "\\"success\\"",
+        Array [
+          <Article
+            title="some title"
+            url="https://en.wikipedia.org/wiki/some title"
+          />,
+          <Article
+            title="another title"
+            url="https://en.wikipedia.org/wiki/another title"
+          />,
+          <Article
+            title="a third title"
+            url="https://en.wikipedia.org/wiki/a third title"
+          />,
+        ],
+      ],
     },
     "ref": null,
-    "rendered": "\\"success\\"",
+    "rendered": Array [
+      "\\"success\\"",
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "title": "some title",
+          "url": "https://en.wikipedia.org/wiki/some title",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "title": "another title",
+          "url": "https://en.wikipedia.org/wiki/another title",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "class",
+        "props": Object {
+          "title": "a third title",
+          "url": "https://en.wikipedia.org/wiki/a third title",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +83,64 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "\\"success\\"",
+        "children": Array [
+          "\\"success\\"",
+          Array [
+            <Article
+              title="some title"
+              url="https://en.wikipedia.org/wiki/some title"
+            />,
+            <Article
+              title="another title"
+              url="https://en.wikipedia.org/wiki/another title"
+            />,
+            <Article
+              title="a third title"
+              url="https://en.wikipedia.org/wiki/a third title"
+            />,
+          ],
+        ],
       },
       "ref": null,
-      "rendered": "\\"success\\"",
+      "rendered": Array [
+        "\\"success\\"",
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "title": "some title",
+            "url": "https://en.wikipedia.org/wiki/some title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "title": "another title",
+            "url": "https://en.wikipedia.org/wiki/another title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "class",
+          "props": Object {
+            "title": "a third title",
+            "url": "https://en.wikipedia.org/wiki/a third title",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
