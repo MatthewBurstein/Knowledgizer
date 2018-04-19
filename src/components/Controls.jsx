@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 class Controls extends Component {
   render() {
     return(
-      <div>"Controls loaded"</div>
+      <div>
+        <button
+          id='clear'
+          onClick={this.props.clearArticles}
+          />
+      </div>
+
     )
   }
 }
