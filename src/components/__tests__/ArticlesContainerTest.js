@@ -1,33 +1,33 @@
 import React from 'react';
-import ArticleContainer from '../ArticleContainer';
+import ArticlesContainer from '../ArticlesContainer';
 import { shallow, mount } from 'enzyme';
 
 jest.useFakeTimers();
 
-describe('ArticleContainer', () => {
+describe('ArticlesContainer', () => {
   const articles = [
     { id:1, title: 'some title', url: 'https://en.wikipedia.org/wiki/some title'},
     { id:2, title: 'another title', url: 'https://en.wikipedia.org/wiki/another title'},
     { id: 3, title: 'a third title', url: 'https://en.wikipedia.org/wiki/a third title' }
   ];
-  const articleContainer = shallow(<ArticleContainer />);
-  articleContainer.setState({ articles });
+  const articlesContainer = shallow(<ArticlesContainer />);
+  articlesContainer.setState({ articles });
 
   it('renders correctly', () => {
-    expect(articleContainer).toMatchSnapshot();
+    expect(articlesContainer).toMatchSnapshot();
   });
 
   it('Contains an Article component for each article in `state`', () => {
-    const articles = articleContainer.find('Article');
+    const articles = articlesContainer.find('Article');
     expect(articles).toHaveLength(3);
   });
 
   describe('delay and repeat article rendering functionality', () => {
-    let mountedArticleContainer, callApiSpy, didMountSpy, setStateSpy;
+    let mountedArticlesContainer, callApiSpy, didMountSpy, setStateSpy;
     beforeAll(() => {
-      callApiSpy = jest.spyOn(ArticleContainer.prototype, 'callApi').mockReturnValue(Promise.resolve({articles}));
-      setStateSpy = jest.spyOn(ArticleContainer.prototype, 'setState');
-      mountedArticleContainer = mount(<ArticleContainer />);
+      callApiSpy = jest.spyOn(ArticlesContainer.prototype, 'callApi').mockReturnValue(Promise.resolve({articles}));
+      setStateSpy = jest.spyOn(ArticlesContainer.prototype, 'setState');
+      mountedArticlesContainer = mount(<ArticlesContainer />);
     });
 
     it('calls call Api on mounting', () => {
@@ -39,15 +39,15 @@ describe('ArticleContainer', () => {
 
       jest.runTimersToTime(1000);
       expect(setStateSpy).toHaveBeenCalledTimes(1);
-      expect(mountedArticleContainer.state().articles).toContain(articles[0]);
+      expect(mountedArticlesContainer.state().articles).toContain(articles[0]);
 
       jest.runTimersToTime(1000);
       expect(setStateSpy).toHaveBeenCalledTimes(2);
-      expect(mountedArticleContainer.state().articles).toContain(articles[1]);
+      expect(mountedArticlesContainer.state().articles).toContain(articles[1]);
 
       jest.runTimersToTime(1000);
       expect(setStateSpy).toHaveBeenCalledTimes(3);
-      expect(mountedArticleContainer.state().articles).toContain(articles[2]);
+      expect(mountedArticlesContainer.state().articles).toContain(articles[2]);
     });
   });
 

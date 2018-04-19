@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Article from './Article';
 import { delayAndRepeat } from './helpers/AppHelpers.js';
 
-class ArticleContainer extends Component {
+class ArticlesContainer extends Component {
   constructor() {
     super();
 
@@ -54,4 +54,4 @@ class ArticleContainer extends Component {
   };
 };
 
-export default ArticleContainer;
+export default ArticlesContainer;

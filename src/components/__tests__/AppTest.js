@@ -11,8 +11,8 @@ describe('App', () => {
     expect(app).toMatchSnapshot();
   });
 
-  it('Contains an ArticleContainer component', () => {
-    const articleContainer = app.find('ArticleContainer');
-    expect(articleContainer).toHaveLength(1)
+  it('Contains an ArticlesContainer component', () => {
+    const articlesContainer = app.find('ArticlesContainer');
+    expect(articlesContainer).toHaveLength(1)
   })
 });
