@@ -18,7 +18,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Controls />,
+        <Controls
+          clearArticles={[Function]}
+        />,
         Array [
           <Article
             title="some title"
@@ -41,7 +43,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "clearArticles": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -92,7 +96,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Controls />,
+          <Controls
+            clearArticles={[Function]}
+          />,
           Array [
             <Article
               title="some title"
@@ -115,7 +121,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "clearArticles": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

@@ -7,9 +7,10 @@ class Controls extends Component {
         <button
           id='clear'
           onClick={this.props.clearArticles}
-          />
+        >
+        Clear
+      </button>
       </div>
-
     )
   }
 }

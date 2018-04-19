@@ -22,7 +22,9 @@ ShallowWrapper {
       "children": <button
         id="clear"
         onClick={[Function]}
-      />,
+      >
+        Clear
+      </button>,
     },
     "ref": null,
     "rendered": Object {
@@ -30,11 +32,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
+        "children": "Clear",
         "id": "clear",
         "onClick": [Function],
       },
       "ref": null,
-      "rendered": null,
+      "rendered": "Clear",
       "type": "button",
     },
     "type": "div",
@@ -48,7 +51,9 @@ ShallowWrapper {
         "children": <button
           id="clear"
           onClick={[Function]}
-        />,
+        >
+          Clear
+        </button>,
       },
       "ref": null,
       "rendered": Object {
@@ -56,11 +61,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "Clear",
           "id": "clear",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "Clear",
         "type": "button",
       },
       "type": "div",
