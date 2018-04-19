@@ -21,7 +21,7 @@ ShallowWrapper {
         <h2>
           Knowledgizer
         </h2>,
-        <ArticleContainer />,
+        <ArticlesContainer />,
       ],
     },
     "ref": null,
@@ -59,7 +59,7 @@ ShallowWrapper {
           <h2>
             Knowledgizer
           </h2>,
-          <ArticleContainer />,
+          <ArticlesContainer />,
         ],
       },
       "ref": null,

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleContainer renders correctly 1`] = `
+exports[`ArticlesContainer renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ArticleContainer />,
+  Symbol(enzyme.__unrendered__): <ArticlesContainer />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,7 +18,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        "\\"success\\"",
+        <Controls
+          clearArticles={[Function]}
+        />,
         Array [
           <Article
             title="some title"
@@ -37,7 +39,17 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      "\\"success\\"",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "clearArticles": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": "1",
@@ -84,7 +96,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          "\\"success\\"",
+          <Controls
+            clearArticles={[Function]}
+          />,
           Array [
             <Article
               title="some title"
@@ -103,7 +117,17 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        "\\"success\\"",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "clearArticles": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": "1",

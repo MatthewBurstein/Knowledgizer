@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Article from './Article';
-import { delayAndRepeat } from './helpers/AppHelpers.js';
+import Controls from './Controls';
+import { delayAndRepeat } from './helpers/ArticlesContainerHelpers.js';
 
-class ArticleContainer extends Component {
+class ArticlesContainer extends Component {
   constructor() {
     super();
 
@@ -33,6 +34,10 @@ class ArticleContainer extends Component {
     return body;
   };
 
+  clearArticles = () => {
+    this.setState(prevState => ({ articles: [] }))
+  };
+
   renderArticle(article) {
       return(
         <Article
@@ -45,7 +50,10 @@ class ArticleContainer extends Component {
 
   render() {
     return(
-      <div>"success"
+      <div>
+        <Controls
+          clearArticles={this.clearArticles}
+        />
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)
         })}
@@ -54,4 +62,4 @@ class ArticleContainer extends Component {
   };
 };
 
-export default ArticleContainer;
+export default ArticlesContainer;

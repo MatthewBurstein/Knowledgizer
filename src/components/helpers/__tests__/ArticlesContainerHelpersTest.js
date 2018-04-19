@@ -1,4 +1,4 @@
-import { delayAndRepeat } from '../AppHelpers'
+import { delayAndRepeat } from '../ArticlesContainerHelpers'
 
 jest.useFakeTimers();
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ArticleContainer from './ArticleContainer';
+import ArticlesContainer from './ArticlesContainer';
 
 class App extends Component {
   constructor() {
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div>
         <h2>Knowledgizer</h2>
-        <ArticleContainer />
+        <ArticlesContainer />
       </div>
     )
   }
