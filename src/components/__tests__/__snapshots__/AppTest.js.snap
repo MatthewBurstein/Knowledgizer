@@ -22,7 +22,6 @@ ShallowWrapper {
           Knowledgizer
         </h2>,
         <ArticlesContainer />,
-        <ControlsContainer />,
       ],
     },
     "ref": null,
@@ -47,15 +46,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -70,7 +60,6 @@ ShallowWrapper {
             Knowledgizer
           </h2>,
           <ArticlesContainer />,
-          <ControlsContainer />,
         ],
       },
       "ref": null,
@@ -85,15 +74,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Knowledgizer",
           "type": "h2",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
         },
         Object {
           "instance": null,

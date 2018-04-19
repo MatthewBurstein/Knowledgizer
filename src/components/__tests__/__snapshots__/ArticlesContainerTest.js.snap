@@ -18,22 +18,34 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Article
-          title="some title"
-          url="https://en.wikipedia.org/wiki/some title"
-        />,
-        <Article
-          title="another title"
-          url="https://en.wikipedia.org/wiki/another title"
-        />,
-        <Article
-          title="a third title"
-          url="https://en.wikipedia.org/wiki/a third title"
-        />,
+        <Controls />,
+        Array [
+          <Article
+            title="some title"
+            url="https://en.wikipedia.org/wiki/some title"
+          />,
+          <Article
+            title="another title"
+            url="https://en.wikipedia.org/wiki/another title"
+          />,
+          <Article
+            title="a third title"
+            url="https://en.wikipedia.org/wiki/a third title"
+          />,
+        ],
       ],
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": "1",
@@ -80,22 +92,34 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Article
-            title="some title"
-            url="https://en.wikipedia.org/wiki/some title"
-          />,
-          <Article
-            title="another title"
-            url="https://en.wikipedia.org/wiki/another title"
-          />,
-          <Article
-            title="a third title"
-            url="https://en.wikipedia.org/wiki/a third title"
-          />,
+          <Controls />,
+          Array [
+            <Article
+              title="some title"
+              url="https://en.wikipedia.org/wiki/some title"
+            />,
+            <Article
+              title="another title"
+              url="https://en.wikipedia.org/wiki/another title"
+            />,
+            <Article
+              title="a third title"
+              url="https://en.wikipedia.org/wiki/a third title"
+            />,
+          ],
         ],
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": "1",

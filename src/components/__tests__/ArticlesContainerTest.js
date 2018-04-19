@@ -17,6 +17,11 @@ describe('ArticlesContainer', () => {
     expect(articlesContainer).toMatchSnapshot();
   });
 
+  it('contains a Controls component', () => {
+    const controls = articlesContainer.find('Controls');
+    expect(controls).toHaveLength(1)
+  })
+
   it('Contains an Article component for each article in `state`', () => {
     const articles = articlesContainer.find('Article');
     expect(articles).toHaveLength(3);

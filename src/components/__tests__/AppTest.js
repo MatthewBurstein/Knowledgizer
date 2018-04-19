@@ -13,9 +13,4 @@ describe('App', () => {
     const articlesContainer = app.find('ArticlesContainer');
     expect(articlesContainer).toHaveLength(1)
   })
-
-  it('contains a ControlsContainer component', () => {
-    const controlsContainer = app.find('ControlsContainer');
-    expect(controlsContainer).toHaveLength(1)
-  })
 });
