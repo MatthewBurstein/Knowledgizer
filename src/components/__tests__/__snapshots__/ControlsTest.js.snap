@@ -29,12 +29,14 @@ ShallowWrapper {
           Clear
         </button>,
         <button
+          disabled={true}
           id="stop-printing"
           onClick={[Function]}
         >
           Stop
         </button>,
         <button
+          disabled={undefined}
           id="start-printing"
           onClick={[Function]}
         >
@@ -63,6 +65,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Stop",
+          "disabled": true,
           "id": "stop-printing",
           "onClick": [Function],
         },
@@ -76,6 +79,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Start",
+          "disabled": undefined,
           "id": "start-printing",
           "onClick": [Function],
         },
@@ -100,12 +104,14 @@ ShallowWrapper {
             Clear
           </button>,
           <button
+            disabled={true}
             id="stop-printing"
             onClick={[Function]}
           >
             Stop
           </button>,
           <button
+            disabled={undefined}
             id="start-printing"
             onClick={[Function]}
           >
@@ -134,6 +140,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Stop",
+            "disabled": true,
             "id": "stop-printing",
             "onClick": [Function],
           },
@@ -147,6 +154,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Start",
+            "disabled": undefined,
             "id": "start-printing",
             "onClick": [Function],
           },

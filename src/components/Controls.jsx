@@ -13,12 +13,14 @@ class Controls extends Component {
         <button
           id='stop-printing'
           onClick={this.props.stopPrinting}
+          disabled={!this.props.isPrinting}
         >
           Stop
         </button>
         <button
           id='start-printing'
           onClick={this.props.startPrinting}
+          disabled={this.props.isPrinting}
         >
           Start
         </button>

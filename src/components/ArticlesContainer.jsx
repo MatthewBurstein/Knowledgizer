@@ -68,6 +68,7 @@ class ArticlesContainer extends Component {
           clearArticles={this.clearArticles}
           stopPrinting={this.stopPrinting}
           startPrinting={this.startPrinting}
+          isPrinting={this.shouldPrint.print}
         />
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)
