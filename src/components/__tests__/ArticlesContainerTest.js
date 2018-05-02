@@ -17,9 +17,21 @@ describe('ArticlesContainer', () => {
     expect(articlesContainer).toMatchSnapshot();
   });
 
+  it('contains a Controls component', () => {
+    const controls = articlesContainer.find('Controls');
+    expect(controls).toHaveLength(1)
+  })
+
   it('Contains an Article component for each article in `state`', () => {
     const articles = articlesContainer.find('Article');
     expect(articles).toHaveLength(3);
+  });
+
+  describe('.clearArticles()', () => {
+    it('clears all articles from state', () => {
+      articlesContainer.instance().clearArticles()
+      expect(articlesContainer.state().articles).toHaveLength(0)
+    });
   });
 
   describe('delay and repeat article rendering functionality', () => {

@@ -2,8 +2,6 @@ import React from 'react';
 import App from '../App';
 import { shallow } from 'enzyme';
 
-jest.useFakeTimers();
-
 describe('App', () => {
   const app = shallow(<App />);
 
