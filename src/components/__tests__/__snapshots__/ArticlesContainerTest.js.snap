@@ -20,6 +20,9 @@ ShallowWrapper {
       "children": Array [
         <Controls
           clearArticles={[Function]}
+          isPrinting={true}
+          startPrinting={[Function]}
+          stopPrinting={[Function]}
         />,
         Array [
           <Article
@@ -45,6 +48,9 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "clearArticles": [Function],
+          "isPrinting": true,
+          "startPrinting": [Function],
+          "stopPrinting": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -98,6 +104,9 @@ ShallowWrapper {
         "children": Array [
           <Controls
             clearArticles={[Function]}
+            isPrinting={true}
+            startPrinting={[Function]}
+            stopPrinting={[Function]}
           />,
           Array [
             <Article
@@ -123,6 +132,9 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "clearArticles": [Function],
+            "isPrinting": true,
+            "startPrinting": [Function],
+            "stopPrinting": [Function],
           },
           "ref": null,
           "rendered": null,

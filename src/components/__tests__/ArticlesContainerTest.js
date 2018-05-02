@@ -10,7 +10,7 @@ describe('ArticlesContainer', () => {
     { id:2, title: 'another title', url: 'https://en.wikipedia.org/wiki/another title'},
     { id: 3, title: 'a third title', url: 'https://en.wikipedia.org/wiki/a third title' }
   ];
-  const articlesContainer = shallow(<ArticlesContainer />);
+  let articlesContainer = shallow(<ArticlesContainer />);
   articlesContainer.setState({ articles });
 
   it('renders correctly', () => {
@@ -33,6 +33,31 @@ describe('ArticlesContainer', () => {
       expect(articlesContainer.state().articles).toHaveLength(0)
     });
   });
+
+  describe('.stopPrinting', () => {
+    it('sets state.shouldPrint to false', () => {
+      articlesContainer.instance().stopPrinting();
+      expect(articlesContainer.instance().shouldPrint.print).toBe(false)
+    })
+  })
+
+  describe('.startPrinting', () => {
+
+    beforeEach(() => {
+      articlesContainer.instance().printArticles = jest.fn()
+    })
+
+    it('sets state.shouldPrint to true', () => {
+      articlesContainer.instance().stopPrinting();
+      articlesContainer.instance().startPrinting();
+      expect(articlesContainer.instance().shouldPrint.print).toBe(true)
+    })
+
+    it('calls this.printArticles', () => {
+      articlesContainer.instance().startPrinting();
+      expect(articlesContainer.instance().printArticles).toHaveBeenCalledTimes(1);
+    })
+  })
 
   describe('delay and repeat article rendering functionality', () => {
     let mountedArticlesContainer, callApiSpy, didMountSpy, setStateSpy;

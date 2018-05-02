@@ -6,6 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Controls
     clearArticles={[Function]}
+    startPrinting={[Function]}
+    stopPrinting={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,44 +21,32 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <button
-        id="clear"
-        onClick={[Function]}
-      >
-        Clear
-      </button>,
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "Clear",
-        "id": "clear",
-        "onClick": [Function],
-      },
-      "ref": null,
-      "rendered": "Clear",
-      "type": "button",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <button
+      "children": Array [
+        <button
           id="clear"
           onClick={[Function]}
         >
           Clear
         </button>,
-      },
-      "ref": null,
-      "rendered": Object {
+        <button
+          disabled={true}
+          id="stop-printing"
+          onClick={[Function]}
+        >
+          Stop
+        </button>,
+        <button
+          disabled={undefined}
+          id="start-printing"
+          onClick={[Function]}
+        >
+          Start
+        </button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -69,6 +59,110 @@ ShallowWrapper {
         "rendered": "Clear",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Stop",
+          "disabled": true,
+          "id": "stop-printing",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Stop",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Start",
+          "disabled": undefined,
+          "id": "start-printing",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Start",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            id="clear"
+            onClick={[Function]}
+          >
+            Clear
+          </button>,
+          <button
+            disabled={true}
+            id="stop-printing"
+            onClick={[Function]}
+          >
+            Stop
+          </button>,
+          <button
+            disabled={undefined}
+            id="start-printing"
+            onClick={[Function]}
+          >
+            Start
+          </button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Clear",
+            "id": "clear",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Clear",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Stop",
+            "disabled": true,
+            "id": "stop-printing",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Stop",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Start",
+            "disabled": undefined,
+            "id": "start-printing",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Start",
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
   ],

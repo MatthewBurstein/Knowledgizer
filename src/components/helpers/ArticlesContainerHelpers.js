@@ -1,10 +1,10 @@
-const delayAndRepeat = (delayedFunct, delayedFunctArgs, delayTime) => {
+const delayAndRepeat = (delayedFunct, delayedFunctArgs, shouldPrint, delayTime) => {
   if (delayedFunctArgs.length === 0) { return }
-  const currentArg = delayedFunctArgs.shift();
   setTimeout(() => {
-    delayedFunct(currentArg);
-    if(delayedFunctArgs.length > 0) {
-      delayAndRepeat(delayedFunct, delayedFunctArgs, delayTime);
+    if(shouldPrint.print) {
+      const currentArg = delayedFunctArgs.shift();
+      delayedFunct(currentArg);
+      delayAndRepeat(delayedFunct, delayedFunctArgs, shouldPrint, delayTime);
     }
   }, delayTime);
 }

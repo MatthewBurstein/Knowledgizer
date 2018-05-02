@@ -7,21 +7,25 @@ class ArticlesContainer extends Component {
   constructor() {
     super();
 
-    this.articles=[];
+    this.shouldPrint = { print : true }
+    this.articlesInQueue = [];
     this.state = {
       articles: []
     };
   };
 
-
   componentDidMount() {
+    this.printArticles();
+  };
+
+  printArticles = () => {
     this.callApi()
       .then(res => {
-        this.articles = this.articles.concat(res.articles);
-        delayAndRepeat(this.addArticleToState, this.articles, 1000);
+        this.articlesInQueue = this.articlesInQueue.concat(res.articles);
+        delayAndRepeat(this.addArticleToState, this.articlesInQueue, this.shouldPrint, 1000);
       })
-      .catch(err => console.log(err));
-  };
+      .catch(err => console.log('error in callApi is ', err));
+  }
 
   addArticleToState = article => {
     this.setState(prevState => ({ articles: [...prevState.articles, article] }));
@@ -38,6 +42,15 @@ class ArticlesContainer extends Component {
     this.setState(prevState => ({ articles: [] }))
   };
 
+  stopPrinting = () => {
+    this.shouldPrint['print'] = false
+  }
+
+  startPrinting = () => {
+    this.shouldPrint['print'] = true;
+    this.printArticles();
+  }
+
   renderArticle(article) {
       return(
         <Article
@@ -53,6 +66,9 @@ class ArticlesContainer extends Component {
       <div>
         <Controls
           clearArticles={this.clearArticles}
+          stopPrinting={this.stopPrinting}
+          startPrinting={this.startPrinting}
+          isPrinting={this.shouldPrint.print}
         />
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)
