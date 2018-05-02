@@ -7,19 +7,18 @@ class ArticlesContainer extends Component {
   constructor() {
     super();
 
+    this.shouldPrint = { print : true }
     this.articlesInQueue = [];
     this.state = {
-      articles: [],
-      shouldPrint: true
+      articles: []
     };
   };
-
 
   componentDidMount() {
     this.callApi()
       .then(res => {
         this.articlesInQueue = this.articlesInQueue.concat(res.articles);
-        delayAndRepeat(this.addArticleToState, this.articlesInQueue, this.state, 1000);
+        delayAndRepeat(this.addArticleToState, this.articlesInQueue, this.shouldPrint, 1000);
       })
       .catch(err => console.log(err));
   };
@@ -39,6 +38,10 @@ class ArticlesContainer extends Component {
     this.setState(prevState => ({ articles: [] }))
   };
 
+  stopPrinting = () => {
+    this.shouldPrint['print'] = false
+  }
+
   renderArticle(article) {
       return(
         <Article
@@ -54,6 +57,7 @@ class ArticlesContainer extends Component {
       <div>
         <Controls
           clearArticles={this.clearArticles}
+          stopPrinting={this.stopPrinting}
         />
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)

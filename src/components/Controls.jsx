@@ -8,8 +8,14 @@ class Controls extends Component {
           id='clear'
           onClick={this.props.clearArticles}
         >
-        Clear
-      </button>
+          Clear
+        </button>
+        <button
+          id='stop-printing'
+          onClick={this.props.stopPrinting}
+        >
+          Stop
+        </button>
       </div>
     )
   }

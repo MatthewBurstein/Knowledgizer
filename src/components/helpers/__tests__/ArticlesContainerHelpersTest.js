@@ -3,17 +3,17 @@ import { delayAndRepeat } from '../ArticlesContainerHelpers'
 jest.useFakeTimers();
 
 describe('delayAndRepeat', () => {
-  let delayedFunct, delayTime, state, delayedFunctArgs;
+  let delayedFunct, delayTime, shouldPrint, delayedFunctArgs;
 
   beforeEach(() => {
     delayedFunct = jest.fn();
     delayTime = 1000;
     delayedFunctArgs = ["firstArg", "secondArg"];
-    state = { shouldPrint: true };
+    shouldPrint = { print: true };
   })
 
   it('calls the callback once per second with each successive argument from delayedFunctArgs', () => {
-    delayAndRepeat(delayedFunct, delayedFunctArgs, state, delayTime);
+    delayAndRepeat(delayedFunct, delayedFunctArgs, shouldPrint, delayTime);
 
     expect(delayedFunct).not.toBeCalled();
 
@@ -25,13 +25,13 @@ describe('delayAndRepeat', () => {
   });
 
   it('stops calling the callback when state.shouldPrint === false', () => {
-    delayAndRepeat(delayedFunct, delayedFunctArgs, state, delayTime);
+    delayAndRepeat(delayedFunct, delayedFunctArgs, shouldPrint, delayTime);
     expect(delayedFunct).not.toBeCalled();
 
     jest.runTimersToTime(delayTime)
     expect(delayedFunct).toHaveBeenCalledWith('firstArg');
 
-    state.shouldPrint = false;
+    shouldPrint.print = false;
 
     jest.runTimersToTime(delayTime)
     expect(delayedFunct).not.toHaveBeenLastCalledWith('secondArg');
@@ -39,7 +39,7 @@ describe('delayAndRepeat', () => {
 
   it('does not call the callback if delayedFunctArgs is empty', () => {
     delayedFunctArgs = [];
-    delayAndRepeat(delayedFunct, delayedFunctArgs, state, delayTime);
+    delayAndRepeat(delayedFunct, delayedFunctArgs, shouldPrint, delayTime);
 
     jest.runTimersToTime(delayTime)
     expect(delayedFunct).not.toBeCalled();

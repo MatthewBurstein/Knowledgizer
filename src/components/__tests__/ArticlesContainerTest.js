@@ -34,6 +34,13 @@ describe('ArticlesContainer', () => {
     });
   });
 
+  describe('.stopPrinting', () => {
+    it('sets state.shouldPrint to false', () => {
+      articlesContainer.instance().stopPrinting();
+      expect(articlesContainer.instance().shouldPrint.print).toBe(false)
+    })
+  })
+
   describe('delay and repeat article rendering functionality', () => {
     let mountedArticlesContainer, callApiSpy, didMountSpy, setStateSpy;
     beforeAll(() => {
