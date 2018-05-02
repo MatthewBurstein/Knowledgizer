@@ -10,7 +10,8 @@ class ArticlesContainer extends Component {
     this.shouldPrint = { print : true }
     this.articlesInQueue = [];
     this.state = {
-      articles: []
+      articles: [],
+      shouldPrint: true
     };
   };
 
@@ -44,10 +45,12 @@ class ArticlesContainer extends Component {
 
   stopPrinting = () => {
     this.shouldPrint['print'] = false
+    this.setState({ shouldPrint: false })
   }
 
   startPrinting = () => {
     this.shouldPrint['print'] = true;
+    this.setState({ shouldPrint: true })
     this.printArticles();
   }
 
@@ -68,7 +71,7 @@ class ArticlesContainer extends Component {
           clearArticles={this.clearArticles}
           stopPrinting={this.stopPrinting}
           startPrinting={this.startPrinting}
-          isPrinting={this.shouldPrint.print}
+          isPrinting={this.state.shouldPrint}
         />
         {this.state.articles && this.state.articles.map(article => {
           return this.renderArticle(article)

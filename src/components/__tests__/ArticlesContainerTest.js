@@ -6,8 +6,8 @@ jest.useFakeTimers();
 
 describe('ArticlesContainer', () => {
   const articles = [
-    { id:1, title: 'some title', url: 'https://en.wikipedia.org/wiki/some title'},
-    { id:2, title: 'another title', url: 'https://en.wikipedia.org/wiki/another title'},
+    { id:1, title: 'some title', url: 'https://en.wikipedia.org/wiki/some title' },
+    { id:2, title: 'another title', url: 'https://en.wikipedia.org/wiki/another title' },
     { id: 3, title: 'a third title', url: 'https://en.wikipedia.org/wiki/a third title' }
   ];
   let articlesContainer = shallow(<ArticlesContainer />);
@@ -35,27 +35,36 @@ describe('ArticlesContainer', () => {
   });
 
   describe('.stopPrinting', () => {
-    it('sets state.shouldPrint to false', () => {
+    beforeEach(() => {
       articlesContainer.instance().stopPrinting();
+    })
+
+    it('sets this.shouldPrint to false', () => {
       expect(articlesContainer.instance().shouldPrint.print).toBe(false)
+    })
+
+    it('sets state.shouldPrint to false', () => {
+      expect(articlesContainer.state().shouldPrint).toBe(false)
     })
   })
 
   describe('.startPrinting', () => {
-
     beforeEach(() => {
       articlesContainer.instance().printArticles = jest.fn()
+      articlesContainer.instance().stopPrinting();
+      articlesContainer.instance().startPrinting();
     })
 
     it('sets state.shouldPrint to true', () => {
-      articlesContainer.instance().stopPrinting();
-      articlesContainer.instance().startPrinting();
       expect(articlesContainer.instance().shouldPrint.print).toBe(true)
     })
 
     it('calls this.printArticles', () => {
-      articlesContainer.instance().startPrinting();
       expect(articlesContainer.instance().printArticles).toHaveBeenCalledTimes(1);
+    })
+
+    it('sets state.shouldPrint to true', () => {
+      expect(articlesContainer.state().shouldPrint).toBe(true);
     })
   })
 
