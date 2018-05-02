@@ -7,9 +7,10 @@ class ArticlesContainer extends Component {
   constructor() {
     super();
 
-    this.articles=[];
+    this.articlesInQueue = [];
     this.state = {
-      articles: []
+      articles: [],
+      shouldPrint: true
     };
   };
 
@@ -17,8 +18,8 @@ class ArticlesContainer extends Component {
   componentDidMount() {
     this.callApi()
       .then(res => {
-        this.articles = this.articles.concat(res.articles);
-        delayAndRepeat(this.addArticleToState, this.articles, 1000);
+        this.articlesInQueue = this.articlesInQueue.concat(res.articles);
+        delayAndRepeat(this.addArticleToState, this.articlesInQueue, this.state, 1000);
       })
       .catch(err => console.log(err));
   };
