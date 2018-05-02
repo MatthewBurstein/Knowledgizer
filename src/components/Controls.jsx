@@ -16,6 +16,12 @@ class Controls extends Component {
         >
           Stop
         </button>
+        <button
+          id='start-printing'
+          onClick={this.props.startPrinting}
+        >
+          Start
+        </button>
       </div>
     )
   }

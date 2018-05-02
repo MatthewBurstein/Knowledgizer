@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Controls
     clearArticles={[Function]}
+    startPrinting={[Function]}
     stopPrinting={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -32,6 +33,12 @@ ShallowWrapper {
           onClick={[Function]}
         >
           Stop
+        </button>,
+        <button
+          id="start-printing"
+          onClick={[Function]}
+        >
+          Start
         </button>,
       ],
     },
@@ -63,6 +70,19 @@ ShallowWrapper {
         "rendered": "Stop",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Start",
+          "id": "start-printing",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Start",
+        "type": "button",
+      },
     ],
     "type": "div",
   },
@@ -84,6 +104,12 @@ ShallowWrapper {
             onClick={[Function]}
           >
             Stop
+          </button>,
+          <button
+            id="start-printing"
+            onClick={[Function]}
+          >
+            Start
           </button>,
         ],
       },
@@ -113,6 +139,19 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Stop",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Start",
+            "id": "start-printing",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Start",
           "type": "button",
         },
       ],
